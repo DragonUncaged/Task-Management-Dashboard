@@ -16,16 +16,16 @@ export function TaskFilter() {
   ];
 
   return (
-    <div className="flex items-center space-x-4 bg-white p-4 rounded-lg shadow-md">
-      <ListFilter className="w-5 h-5 text-gray-500" />
+    <div className="flex items-center space-x-4 bg-[#242632] p-4 rounded-xl shadow-lg">
+      <ListFilter className="w-5 h-5 text-gray-400" />
       {filters.map((filter) => (
         <button
           key={filter.value}
           onClick={() => dispatch(setFilter(filter.value as any))}
-          className={`px-4 py-2 rounded-md text-sm font-medium ${
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             currentFilter === filter.value
-              ? 'bg-blue-600 text-white'
-              : 'text-gray-600 hover:bg-gray-100'
+              ? 'bg-[#8b5cf6] text-white'
+              : 'text-gray-400 hover:bg-[#1a1b23] hover:text-white'
           }`}
         >
           {filter.label}
